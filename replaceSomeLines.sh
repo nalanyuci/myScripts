@@ -17,7 +17,7 @@ do
      endN=$(awk -v x=$startN 'BEGIN {print x+10}')
      sed -i ''$startN','$endN'd' $productFile
      afterN=$(awk -v x=$startN 'BEGIN {print x-1}')
-     sed -i ''$afterN' c := d e f g' $productFile
+     sed -i ''$afterN' aVariable := d e f g' $productFile
      echo "done"
    else
      echo "no need to replace"
