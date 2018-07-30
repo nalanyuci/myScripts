@@ -23,7 +23,7 @@ then
     then
       mkdir $branch
       cd $branch
-      "sync code command ~~~"
+      "init codebase command $branch ~~~"
       neededRepo=`grep "the folder that contains device.mk" .repo/manifests/sub.xml`
       neededRepo=`echo $neededRepo | tr '<' '\n<'`
       echo -e "$neededRepo" > repo.txt
@@ -39,7 +39,7 @@ then
 #    echo -e "\n</manifest>" >> .repo/local_manifests/customization.xml
 #    sed -i 's/project /  \<project /' .repo/local_manifests/customization.xml
     
-      mtk_repo sync -j16 -cq $neededRepo
+      "sync repo command $neededRepo ~~~"
     fi
     cd ..
   done
